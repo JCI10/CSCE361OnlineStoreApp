@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\net8.0",
+    "\\Controllers",
+    "\\obj\\Release",
+    "\\obj\\Release\\net8.0",
+    "\\obj\\Release\\net8.0\\ref"
+  ],
+  "SelectedNode": "\\Controllers\\WeatherForecastController.cs",
+  "PreviewInSolutionExplorer": false
+}
