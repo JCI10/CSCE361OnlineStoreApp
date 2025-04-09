@@ -2,7 +2,7 @@ using System;
 
 namespace User
 {
-    public class IUserProducts
+    public interface IUserProducts
     {
         void AddProduct(ProductId productID, UserId userId);
 

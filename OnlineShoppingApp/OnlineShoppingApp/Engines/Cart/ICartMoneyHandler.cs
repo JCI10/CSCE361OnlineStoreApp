@@ -2,7 +2,7 @@
 
 namespace Cart
 {
-    public class ICartMoneyHandler
+    public interface ICartMoneyHandler
     {
         void Checkout(Cart cart);
 

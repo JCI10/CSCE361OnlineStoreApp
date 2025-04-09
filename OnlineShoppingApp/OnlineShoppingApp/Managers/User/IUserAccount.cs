@@ -2,7 +2,7 @@ using System;
 
 namespace User
 {
-    public class IUserAccount
+    public interface IUserAccount
     {
         void Login(string username, string password);
 

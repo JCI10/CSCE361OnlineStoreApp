@@ -2,7 +2,7 @@
 
 namespace Cart
 {
-    public class ICartPersisting
+    public interface ICartPersisting
     {
         void Persist(Cart cart);
 

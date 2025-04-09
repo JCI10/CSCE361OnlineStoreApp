@@ -2,7 +2,7 @@
 
 namespace Cart
 {
-    public class ICartModification
+    public interface ICartModification
     {
         void AddProducts(userId userId, List<Product> products);
         
