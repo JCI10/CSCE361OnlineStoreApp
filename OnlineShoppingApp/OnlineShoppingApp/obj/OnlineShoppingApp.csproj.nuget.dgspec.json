@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\apmak\\source\\repos\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj": {}
+    "C:\\Users\\apmak\\source\\repos\\CSCE361OnlineStoreApp\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\apmak\\source\\repos\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj": {
+    "C:\\Users\\apmak\\source\\repos\\CSCE361OnlineStoreApp\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\apmak\\source\\repos\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj",
+        "projectUniqueName": "C:\\Users\\apmak\\source\\repos\\CSCE361OnlineStoreApp\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj",
         "projectName": "OnlineShoppingApp",
-        "projectPath": "C:\\Users\\apmak\\source\\repos\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj",
+        "projectPath": "C:\\Users\\apmak\\source\\repos\\CSCE361OnlineStoreApp\\OnlineShoppingApp\\OnlineShoppingApp\\OnlineShoppingApp.csproj",
         "packagesPath": "C:\\Users\\apmak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\apmak\\source\\repos\\OnlineShoppingApp\\OnlineShoppingApp\\obj\\",
+        "outputPath": "C:\\Users\\apmak\\source\\repos\\CSCE361OnlineStoreApp\\OnlineShoppingApp\\OnlineShoppingApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
