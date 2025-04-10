@@ -1,7 +1,8 @@
 
 public class Product
 {
-
+ 
+ 
     public int Id { get; }
     public String Name { get; }
     // public List<Image> Images { get; }
