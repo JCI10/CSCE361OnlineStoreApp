@@ -1,8 +1,12 @@
 
-public class Product
+using System.ComponentModel.DataAnnotations;
+
+namespace OnlineShoppingApp.Models
 {
+    public class Product
+    {
  
- 
+    [Key]
     public int Id { get; }
     public String Name { get; }
     // public List<Image> Images { get; }
@@ -12,11 +16,10 @@ public class Product
     public Double Weight { get; }
     public Double Rating { get; }
     public String Sku { get; }
-    // public Category category { get; }
-
+    public Category Category { get; }
     public Product() {} 
 
-    public Product(int id, String name, String manInfo, String description, Double weight, Double rating, String sku){
+    public Product(int id, String name, String manInfo, String description, Double weight, Double rating, String sku, Category category){
         this.Id = id;
         this.Name = name;
         this.ManInfo = manInfo;
@@ -24,6 +27,8 @@ public class Product
         this.Weight = weight;
         this.Rating = rating;
         this.Sku = sku;
+        this.Category = category;
     }
-
+    }
 }
+
