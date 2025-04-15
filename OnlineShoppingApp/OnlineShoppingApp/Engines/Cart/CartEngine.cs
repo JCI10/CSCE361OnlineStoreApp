@@ -1,14 +1,15 @@
 ﻿using System;
+using OnlineShoppingApp.Models;
 
 
-public class CartEngine : ICartPersisting, ICartModification, ICartMoneyhandler
+public class CartEngine : ICartPersisting, ICartModification, ICartMoneyHandler
 {
     public void Persist(int cartId)
     {
         //TODO:Implement Method
     }
 
-    public Cart ViewCart(int userId)
+    public void ViewCart(int userId)
     {
         //TODO:Implement Method
     }
@@ -18,7 +19,7 @@ public class CartEngine : ICartPersisting, ICartModification, ICartMoneyhandler
         //TODO:Implement Method
     }
 
-    public void RemoveProduct(int productId)
+    public void RemoveProduct(int cartId, int productId)
     {
         //TODO:Implement Method
     }
@@ -33,3 +34,4 @@ public class CartEngine : ICartPersisting, ICartModification, ICartMoneyhandler
         //TODO:Implement Method
     }
 }
+
