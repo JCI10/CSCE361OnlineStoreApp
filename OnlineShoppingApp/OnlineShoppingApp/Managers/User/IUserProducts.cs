@@ -1,14 +1,12 @@
 using System;
 
-namespace User
+
+public interface IUserProducts
 {
-    public interface IUserProducts
-    {
-        void AddProduct(ProductId productID, UserId userId);
+    void AddProduct(int productID, int userId);
 
-        void ViewCategory(CategoryId categoryId);
+    void ViewCategory(int categoryId);
 
-        void ViewSearch(string searchString);
+    void ViewSearch(string searchString);
 
-    }
 }

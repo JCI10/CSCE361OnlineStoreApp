@@ -1,12 +1,9 @@
 ﻿using System;
 
-namespace Cart
+public interface ICartModification
 {
-    public interface ICartModification
-    {
-        void AddProducts(userId userId, List<Product> products);
-        
-        void RemoveProduct(productId productId);
-      
-    }
+    void AddProducts(int cartId, List<int> productIds);
+    
+    void RemoveProduct(int cartId, int productId);
+    
 }

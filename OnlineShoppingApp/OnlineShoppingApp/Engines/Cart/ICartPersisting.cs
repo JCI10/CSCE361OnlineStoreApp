@@ -1,11 +1,8 @@
 ﻿using System;
 
-namespace Cart
+public interface ICartPersisting
 {
-    public interface ICartPersisting
-    {
-        void Persist(Cart cart);
+    void Persist(int cartId);
 
-        void ViewCart(UserId userId);
-    }
+    void ViewCart(int userId);
 }

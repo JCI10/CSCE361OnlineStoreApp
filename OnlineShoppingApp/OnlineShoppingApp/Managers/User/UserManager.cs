@@ -1,30 +1,28 @@
 ﻿using System;
 
-namespace Managers
-{
-    public class UserManager : IUserAccount, IUserProducts
+public class UserManager : IUserAccount, IUserProducts
 {
     void Login(string username, string password)
     {
         //TODO:Implement Method
     }
 
-    void Logout(userId userId)
+    void Logout(int userId)
     {
         //TODO:Implement Method
     }
 
-    void ViewAccountInfo(UserId userId)
+    void ViewAccountInfo(int userId)
     {
         //TODO:Implement Method
     }
 
-    void AddProduct(ProductId productID, UserId userId)
+    void AddProduct(int productID, int cartId)
     {
         //TODO:Implement Method
     }
 
-    void ViewCategory(CategoryId categoryId)
+    void ViewCategory(int categoryId)
     {
         //TODO:Implement Method
     }
@@ -33,5 +31,4 @@ namespace Managers
     {
         //TODO:Implement Method
     }
-}
 }

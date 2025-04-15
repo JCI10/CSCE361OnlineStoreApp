@@ -1,14 +1,11 @@
 using System;
 
-namespace User
+public interface IUserAccount
 {
-    public interface IUserAccount
-    {
-        void Login(string username, string password);
+    void Login(string username, string password);
 
-        void Logout(userId userId);
+    void Logout(int userId);
 
-        void ViewAccountInfo(UserId userId);
+    void ViewAccountInfo(int userId);
 
-    }
 }

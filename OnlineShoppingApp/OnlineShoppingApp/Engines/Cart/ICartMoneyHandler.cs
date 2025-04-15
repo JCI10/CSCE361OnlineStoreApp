@@ -1,11 +1,9 @@
 ﻿using System;
 
-namespace Cart
+public interface ICartMoneyHandler
 {
-    public interface ICartMoneyHandler
-    {
-        void Checkout(Cart cart);
+    void Checkout(int cartId);
 
-        void CartTotal(Cart cart);
+    void CartTotal(int cartId);
 }
-}
+
