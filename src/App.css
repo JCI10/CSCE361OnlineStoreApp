@@ -1,62 +1,197 @@
-
-
 /* App.css */
 
 /* Navbar Styling */
 .navbar {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: transparent; /* Fully transparent background */
+  backdrop-filter: none; /* Remove blur effect */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border: none;
+  box-shadow: none;
 }
+/* Logo */
+.navbar-logo {
+  height: 100px; /* Adjust based on your logo's aspect ratio */
+  transition: all 0.3s ease;
+  padding: .00009rem 0.4rem;
+}
+
+.navbar-logo:hover {
+  opacity: 0.9;
+}
+
 
 /* Search Input */
 .navbar .form-control {
-  width: 800px; /* Fixed width for the input */
+  width: 800px;
 }
 
 /* Search Button */
 .navbar .btn {
-  color: black; /* Ensure text color is always black */
+  color: black;
 }
 
-/* Right-Aligned Links */
-.navbar .nav-link {
-  font-weight: bold; /* Make links bold */
-  color: #333; /* Dark gray text color */
-}
-
-/* Hover Effect for Links */
-.navbar .nav-link:hover {
-  color: #0d6efd; /* Bootstrap primary blue on hover */
-}
 
 .navbar-brand {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-  letter-spacing: 1px; /* Spacing between letters */
-  padding: 0.5rem 1rem; /* Add padding for better alignment */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  margin-right: 0;
+  padding: 10px 0 10px 0 !important; /* Top and bottom padding only */
 }
 
+
+
 .navbar-nav .nav-link {
-  font-size: 1rem; /* Slightly larger font size */
-  font-weight: 500; /* Semi-bold text */
-  color: #a39f9f !important; /* Ensure links are white */
-  transition: color 0.3s ease; /* Smooth hover effect */
-  padding: 0.5rem 1rem; /* Add padding for better alignment */
+  font-family: 'MyCustomFont', sans-serif; /* Apply the custom font */
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #080808 !important;
+  transition: color 0.3s ease;
+  padding: 0.2rem 1rem;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #000000 !important; /* Change link color on hover */
+  color: #ffffff !important;
+  font-family: 'MyCustomFont', sans-serif;
 }
 
 .navbar-nav .nav-link.active {
-  border-bottom: 2px solid #000000; /* Highlight active link */
+  border-bottom: 4px solid #000000;
+}
+
+.navbar-nav.me-auto .nav-link.active {
+  color: #ffffff; /* Highlight active category (e.g., pink) */
+  font-weight: bold; /* Make it bolder than regular links */
 }
 
 @media (max-width: 992px) {
-  /* Adjustments for smaller screens */
   .navbar-brand {
     font-size: 1.2rem;
+    color: white !important;
+    font-weight: bold;
   }
 
-  .navbar-nav .nav-link {
-    font-size: 0.9rem;
+
+}
+/* Welcome Section Full Page Background */
+.welcome-section {
+  min-height: 100vh;
+  background-image: url('./assests/images/Home-BG.jpg'); /* Update path if needed */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items from the top */
+  align-items: flex-start;     /* Align items to the left */
+  color: white;
+  text-align: left;            /* Align text to the left */
+  padding: 15rem 12rem;          /* Adjust padding as needed */
+}
+
+  .welcome-section h1 {
+    font-family: 'HeadingFont', sans-serif; /* Apply the custom font */
+    font-size: 4rem;
+    color: #000;
+    margin-bottom: 1rem;
   }
+
+  .welcome-section p {
+    font-family: 'MyCustomFont', sans-serif; /* Apply the custom font */
+    font-size: 2.2rem;
+    color: #000;
+    max-width: 600px;
+  }
+
+
+@font-face {
+  font-family: 'MyCustomFont'; /* Name of the font */
+  src: url('./assests/fonts/fairweather-semi-bold.ttf') format('truetype'); /* Path to the font file */
+  font-weight: normal; /* Regular font weight */
+  font-style: normal; /* Normal style */
+}
+
+/* Define Fonts */
+@font-face {
+  font-family: 'HeadingFont';
+  src: url('./assests/fonts/fairweather-heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ParagraphFont';
+  src: url('./assests/fonts/fairweather-semi-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Step 2: Apply the Custom Font Globally */
+body {
+  font-family: 'MyCustomFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
+}
+
+
+/* Login page styling */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-prompt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-prompt a {
+  color: #000;
+  text-decoration: underline;
 }

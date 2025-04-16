@@ -1,12 +1,30 @@
 // src/components/Navbar.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import logo from '../assests/images/logo1.png';
 
-const Navbar = () => {
+const NavbarComponent = () => {
   const [query, setQuery] = useState('');
+  const [isSearchVisible, setSearchVisible] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -15,64 +33,120 @@ const Navbar = () => {
     }
   };
 
+  const toggleSearch = () => {
+    setSearchVisible(!isSearchVisible);
+  };
+
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light shadow-sm">
-      <div className="container-fluid">
-        {/* Brand/Logo */}
-        <Link to="/" className="navbar-brand fw-bold fs-4 px-3">Online Store</Link>
+    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+      <Container fluid className="px-0">
+        {/* Logo - pushed to left */}
+        <Navbar.Brand as={Link} to="/" className="me-auto">
+          <img 
+            src={logo} 
+            alt="Furniture Shop Logo" 
+            className="navbar-logo"
+            style={{ 
+              height: '100px',
+              padding: '1px 10px',
+              paddingLeft: '0'
+            }}
+          />
+        </Navbar.Brand>
 
-        {/* Toggle Button for Small Screens */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </Navbar.Toggle>
 
-        {/* Navbar Content */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          {/* Centered Search Bar */}
-          <form className="d-flex mx-auto my-2 my-lg-0" onSubmit={handleSearch}>
-            <input
-              type="text"
-              className="form-control me-2"
-              placeholder="Search by Inspiration..."
-              aria-label="Search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <button className="btn btn-outline-light text-dark" type="submit">
-              <FontAwesomeIcon icon={faSearch} /> Search
-            </button>
-          </form>
+        <Navbar.Collapse id="basic-navbar-nav">
+          {/* Centered Navigation Links */}
+          <Nav className="mx-auto"> 
+            <Nav.Link 
+              as="button" 
+              className="text-dark border-0 bg-transparent"
+              onClick={toggleSearch}
+            >
+              <FontAwesomeIcon icon={faSearch} />
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/shop-all"
+              className={activeLink === "shop-all" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("shop-all")}
+            >
+              SHOP ALL
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/decor"
+              className={activeLink === "decor" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("decor")}
+            >
+              DECOR
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/office"
+              className={activeLink === "office" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("office")}
+            >
+              OFFICE
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/living-room"
+              className={activeLink === "living-room" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("living-room")}
+            >
+              LIVING ROOM
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/bedroom"
+              className={activeLink === "bedroom" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("bedroom")}
+            >
+              BEDROOM
+            </Nav.Link>
 
-          {/* Right-Aligned Links */}
-          <ul className="navbar-nav ms-auto">
-             <li className="nav-item">
-              <Link to="/cart" className="nav-link">
-                <FontAwesomeIcon icon={faShoppingCart} /> Cart
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/login" className="nav-link">
-                Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/register" className="nav-link">
-                Sign up
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            
+          </Nav>
+
+          {/* Right-aligned Links with Search Icon */}
+          <Nav className="ms-auto d-flex align-items-center">
+            {/* Search Bar - appears below when active */}
+            {isSearchVisible && (
+              <div className="position-absolute w-0 start-0 top-80 p-1 shadow-sm">
+                <form className="d-flex mx-auto" style={{ maxWidth: '400px',paddingLeft:100}} onSubmit={handleSearch}>
+                  <input
+                    type="text"
+                    className="form-control me-2"
+                    placeholder="Search by Inspiration..."
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                  />
+
+                </form>
+              </div>
+            )}
+
+            {/* Search Icon - now grouped with right-aligned items */}
+
+
+            <Nav.Link as={Link} to="/cart">
+              <FontAwesomeIcon icon={faShoppingCart} /> Cart
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarComponent;

@@ -1,10 +1,13 @@
-// src/pages/Home.js
 import React from 'react';
+import '../App.css';
 
 const Home = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>The best way to buy the products you love</h1>
+    <div className="welcome-section">
+      <div className="welcome-text">
+        <h1>Welcome to the Online Store</h1>
+        <p>Browse our products and enjoy shopping!</p>
+      </div>
     </div>
   );
 };
