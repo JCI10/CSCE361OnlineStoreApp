@@ -2,32 +2,32 @@
 
 public class UserManager : IUserAccount, IUserProducts
 {
-    void Login(string username, string password)
+    public void Login(string username, string password)
     {
         //TODO:Implement Method
     }
 
-    void Logout(int userId)
+    public void Logout(int userId)
     {
         //TODO:Implement Method
     }
 
-    void ViewAccountInfo(int userId)
+    public void ViewAccountInfo(int userId)
     {
         //TODO:Implement Method
     }
 
-    void AddProduct(int productID, int cartId)
+    public void AddProduct(int productID, int cartId)
     {
         //TODO:Implement Method
     }
 
-    void ViewCategory(int categoryId)
+    public void ViewCategory(int categoryId)
     {
         //TODO:Implement Method
     }
 
-    void ViewSearch(string searchString)
+    public void ViewSearch(string searchString)
     {
         //TODO:Implement Method
     }
