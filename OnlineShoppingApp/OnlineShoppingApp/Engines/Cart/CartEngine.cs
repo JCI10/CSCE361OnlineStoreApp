@@ -2,7 +2,7 @@
 using OnlineShoppingApp.Models;
 
 
-public class CartEngine : ICartPersisting, ICartModification, ICartMoneyHandler
+public class CartEngine : ICartModification, ICartMoneyHandler
 {
     public void Persist(int cartId)
     {

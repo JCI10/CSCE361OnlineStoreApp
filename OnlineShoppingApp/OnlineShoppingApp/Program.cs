@@ -16,6 +16,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapGet("/cart", async (int userId, ICartPersisting cartAccessor) =>
+{
+    var products = await cartAccessor.ViewCart(userId);
+    return products;
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

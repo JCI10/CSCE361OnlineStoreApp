@@ -34,3 +34,14 @@ C:\Users\apmak\source\repos\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0
 C:\Users\apmak\source\repos\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.pdb
 C:\Users\apmak\source\repos\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.genruntimeconfig.cache
 C:\Users\apmak\source\repos\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\ref\OnlineShoppingApp.dll
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.csproj.AssemblyReference.cache
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.AssemblyInfoInputs.cache
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.AssemblyInfo.cs
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.csproj.CoreCompileInputs.cache
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.sourcelink.json
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.dll
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\refint\OnlineShoppingApp.dll
+C:\Users\apmak\source\repos\CSCE361OnlineStoreApp\OnlineShoppingApp\OnlineShoppingApp\obj\Debug\net8.0\OnlineShoppingApp.pdb

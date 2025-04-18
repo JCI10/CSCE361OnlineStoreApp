@@ -1,5 +1,6 @@
 
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace OnlineShoppingApp.Models
 {
@@ -7,21 +8,22 @@ namespace OnlineShoppingApp.Models
     {
  
     [Key]
-    public int Id { get; }
-    public String Name { get; }
-    // public List<Image> Images { get; }
-    public String ManInfo { get; }
-    public String Description { get; }
-    public String Dimensions { get; }
-    public Double Weight { get; }
-    public Double Rating { get; }
-    public String Sku { get; }
-    public Category Category { get; }
+    public int Id { get;set; }
+    public String Name { get;set; }
+     public List<Image> Images { get;set; }
+    public String ManInfo { get;set; }
+    public String Description { get;set; }
+    public String Dimensions { get;set; }
+    public Double Weight { get;set; }
+    public Double Rating { get;set; }
+    public String Sku { get;set; }
+    public Category Category { get;set; }
     public Product() {} 
 
-    public Product(int id, String name, String manInfo, String description, Double weight, Double rating, String sku, Category category){
+    public Product(int id, String name,List<Image> images, String manInfo, String description, Double weight, Double rating, String sku, Category category){
         this.Id = id;
         this.Name = name;
+        this.Images = images;
         this.ManInfo = manInfo;
         this.Description = description;
         this.Weight = weight;
